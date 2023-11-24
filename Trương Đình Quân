@@ -1,0 +1,62 @@
+Bài tập 7:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bai_7_OOP
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double p,t;
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("chương trình tính tiền điện\n");
+            do
+            {
+                Console.Write("nhập chỉ số điện: ");
+                p = Convert.ToInt32(Console.ReadLine());
+                if (p > 0)
+                {
+                    if (p <= 50)
+                    {
+                        t = (p * 1484) + (p * 1484 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                    else if (p <= 100)
+                    {
+                        t = (p * 1533) + (p * 1533 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                    else if (p <= 200)
+                    {
+                        t = (p * 1786) + (p * 1786 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                    else if (p <= 300)
+                    {
+                        t = (p * 2242) + (p * 2242 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                    else if (p <= 400)
+                    {
+                        t = (p * 2503) + (p * 2503 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                    else
+                    {
+                        t = (p * 2587) + (p * 2587 * 0.1);
+                        Console.WriteLine(t);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("nhập sai giá trị");
+                }
+            } while (p<=0);
+            Console.ReadKey();
+        }
+    }
+}
